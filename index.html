@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPM Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col">
+                <h1>CPM Calculator</h1>
+            </div>
+        </div>
+        <div class="row informationCopy">
+            <div class="col">
+                <p>Get the accurate number of impressions, clicks and media cost on a media plan.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 text-center calculatorDisplay">
+                <div class="warning"></div>
+                <form id="form">
+                    <!-- Impressions -->
+                    <div class="form-row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Impressions</span>
+                            </div>
+                            <input type="number" id="impressions" class="form-control" aria-label="Impressions)">
+                        </div>
+                    </div> 
+                       <!-- CPM -->
+                       <div class="form-row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">CPM</span>
+                                <span class="input-group-text">$0.00</span>
+                            </div>
+                            <input type="number" id="cpm" class="form-control" step="0.01" aria-label="CPM Dollar amount (with dot and two decimal places)">
+                        </div>
+                    </div> 
+                    <!-- Media Cost -->
+                    <div class="form-row">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Media Cost</span>
+                                <span class="input-group-text">$0.00</span>
+                            </div>
+                            <input type="number" id="mediacost" class="form-control" step="0.01" aria-label="Media Cost Dollar amount (with dot and two decimal places)">
+                        </div>
+                    </div> 
+                    <button type="submit" id="calcSubmit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <!-- Calculator Results -->
+        <div class="row">
+            <div class="col-12">
+                <table class="table tabl-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>Impressions</th>
+                            <th>CPM</th>
+                            <th>Media Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabledata">
+                    </tbody>
+                </table>
+            </div>
+            <!-- <button class="bg-danger text-white clearResults">Clear Results</button> -->
+        </div>            
+        <!-- Contact Me - Report Bugs -->
+        <div class="row">
+            <div class="col-12">
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
