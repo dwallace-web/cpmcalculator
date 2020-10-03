@@ -51,7 +51,7 @@ function inputData(e) {
     impressionrow.innerHTML = impressionsvalue;
     cpmrow.innerHTML = cpmvalue;
     mediacostrow.innerHTML = mediacostvalue;
-
+        //comment
     row.appendChild(impressionrow);
     row.appendChild(cpmrow);
     row.appendChild(mediacostrow);
