@@ -30,7 +30,9 @@ function inputData(e) {
         //if all empty request a number
 
     if(impressionsvalue != "" && cpmvalue != "" & mediacostvalue != "") {
-        console.log('TMI');
+        //console.log('TMI');
+        warning.style.color = 'red';
+        warning.style.padding = '10px';
         warning.innerHTML = "There's too much data here!"
 
     } else if(impressionsvalue != "" && cpmvalue != "") {
@@ -38,9 +40,9 @@ function inputData(e) {
     // (Total number of Impressions / 1000) * CPM = Total cost of campaign
     mediacostvalue = ((impressionsvalue / 1000) * cpmvalue)
     console.log('Calc Cost',typeof mediacostvalue, mediacostvalue);
+    mediacostvalue = mediacostvalue.toFixed(2);
+    console.log(mediacostvalue);
 
-    parseInt(mediacostvalue);
-    
 
     //Add Data To Table
     let row = document.createElement('tr');
@@ -64,8 +66,8 @@ function inputData(e) {
     // (Total cost of campaign / CPM) * 1000 = Total number of impressions
     impressionsvalue = ((mediacostvalue / cpmvalue) * 1000) 
     console.log('Calc Impressions', impressionsvalue);
-    Math.round(impressionsvalue);
-    console.log('updated', typeof impressionsvalue, cpmvalue)
+    impressionsvalue = Math.round(impressionsvalue);
+    console.log('updated', typeof impressionsvalue, impressionsvalue)
     
     let row = document.createElement('tr');
     let impressionrow = document.createElement('td');
@@ -89,7 +91,7 @@ function inputData(e) {
     // Total cost of campaign / (Total number of impressions / 1000)  = CPM
     cpmvalue = (mediacostvalue / (impressionsvalue / 1000))
     console.log('Calc CPM', cpmvalue);
-
+    cpmvalue = cpmvalue.toFixed(2);
     console.log('updated', typeof cpmvalue, cpmvalue)
 
     let row = document.createElement('tr');
@@ -111,6 +113,8 @@ function inputData(e) {
 
     } else {
         console.log('empty values', cpmvalue);
+        warning.style.color = 'red';
+        warning.style.padding = '10px';
         warning.innerHTML = "There's not enough data here!"
     }
     
@@ -119,7 +123,7 @@ function inputData(e) {
 
 
 // clear table
-/* 
+
 const clearResults = document.querySelector('.clearResults');
 clearResults.addEventListener('click', clearTable)
 
@@ -129,4 +133,4 @@ function clearTable(e) {
     e.preventDefault();
 
     console.log("clear table")
-}; */
+};
