@@ -131,6 +131,13 @@ function clearTable(e) {
 
     console.log(e);
     e.preventDefault();
-
+    
     console.log("clear table")
+    let tablerow = document.getElementsByTagName("tr");
+    console.log('table row', tablerow);
+
+    while(tbody.firstChild){
+        tbody.removeChild(tbody.firstChild)
+    }
+    
 };
