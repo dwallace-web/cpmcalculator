@@ -1,0 +1,17 @@
+form {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.clearResults {
+    border: 5px black solid;
+    margin: 50px;
+    padding: 60px;
+}
+form label {
+    font-weight: bolder;
+}
+
+.warning {
+    color: red;
+    padding: 10px;
+}
