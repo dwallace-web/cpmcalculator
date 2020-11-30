@@ -1,11 +1,23 @@
+#head {
+    background-color: rgb(41, 108, 255);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#information {
+    margin: 1rem;
+    border: 1px black solid;
+    border-radius: 15px;
+    padding: 1rem;
+}
 form {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 .clearResults {
-    border: 5px black solid;
-    margin: 50px;
-    padding: 60px;
+
+    margin: 1rem;
+    padding: 2rem;
 }
 form label {
     font-weight: bolder;
@@ -13,5 +25,29 @@ form label {
 
 .warning {
     color: red;
-    padding: 10px;
+    font-weight: bolder;
 }
+
+.footer {
+    position: relative;
+    width:100%;
+    /* line-height: 40px; */
+    background-color: rgb(41, 108, 255);
+    color: white;
+}
+footer > div > span > a{
+    color: orange; 
+}  
+/* 
+@media (min-width: 576px) { 
+
+    .footer {
+        display: block;
+        position: absolute;
+        width:100%;
+        line-height: 40px;
+        bottom: 0;
+        background-color: rgb(41, 108, 255);
+        color: white;
+    }
+} */

@@ -20,18 +20,15 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row text-center">
+    <div class="container-fluid">
+        <div class="row text-center" id="head">
             <div class="col">
                 <h1>CPM Calculator</h1>
             </div>
         </div>
-        <div class="row informationCopy">
-            <div class="col text-center">
-                <p class="text-lg-left">CPM is CPM (cost per mille) is universal paid advertising purchasing standard
-                    where companies pay a price for every 1,000 impressions an ad receives. An “impression” refers to
-                    when someone sees a campaign. The calculator will allow you to retrieve an accurate values for
-                    impressions, CPM, or total spend on a modern media plan.</p>
+        <div class="row">
+            <div class="col">
+                <p class="text-lg-left" id="information">CPM (cost per mille) is a paid advertising buying standard. Companies pay a price for every 1,000 impressions an ad receives. An “impression” refers to when someone sees a campaign. The calculator will allow you to retrieve values for impressions, CPM, or the cost on a media plan.</p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -96,8 +93,13 @@
                 <button class="btn bg-danger text-white clearResults">Clear Results</button>
             </div>
         </div>
+        
     </div>
-
+    <footer class="footer fixed-bottom ">
+        <div class="container text-left muted">
+            <span>Built by <a href="http://linkedin.com/in/dwallacemarketing">David Wallace</span></a>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
