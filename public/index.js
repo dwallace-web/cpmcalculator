@@ -31,18 +31,18 @@ function inputData(e) {
 
     if(impressionsvalue != "" && cpmvalue != "" & mediacostvalue != "") {
         //console.log('TMI');
-        warning.style.color = 'red';
-        warning.style.padding = '10px';
         warning.innerHTML = "There's too much data here!"
 
     } else if(impressionsvalue != "" && cpmvalue != "") {
-        
+
+    //remove warning: 
+    warning.innerHTML ="";
+
     // (Total number of Impressions / 1000) * CPM = Total cost of campaign
     mediacostvalue = ((impressionsvalue / 1000) * cpmvalue)
     console.log('Calc Cost',typeof mediacostvalue, mediacostvalue);
     mediacostvalue = mediacostvalue.toFixed(2);
     console.log(mediacostvalue);
-
 
     //Add Data To Table
     let row = document.createElement('tr');
@@ -113,12 +113,8 @@ function inputData(e) {
 
     } else {
         console.log('empty values', cpmvalue);
-        warning.style.color = 'red';
-        warning.style.padding = '10px';
         warning.innerHTML = "There's not enough data here!"
     }
-    
-    //round finalmedia cost and cpm to two decimals with .parseInt.toFixed();
 };
 
 
@@ -129,6 +125,8 @@ clearResults.addEventListener('click', clearTable)
 
 function clearTable(e) {
 
+    warning.innerHTML = "";
+    
     console.log(e);
     e.preventDefault();
     
