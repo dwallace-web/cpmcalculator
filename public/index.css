@@ -38,16 +38,3 @@ form label {
 footer > div > span > a{
     color: orange; 
 }  
-/* 
-@media (min-width: 576px) { 
-
-    .footer {
-        display: block;
-        position: absolute;
-        width:100%;
-        line-height: 40px;
-        bottom: 0;
-        background-color: rgb(41, 108, 255);
-        color: white;
-    }
-} */
